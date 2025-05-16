@@ -1,0 +1,15 @@
+Cheie primara - coloana/set de coloane dintr-un tabel care identifica in mod unic fiecare rand 
+
+Cand avem date sensibilie(IDNP, nr. de asigurare sociala) mai bine e sa adaugam o coloana suplimentara - un id
+
+Cheie straina - coloana sau un set de coloane dintr-un tabel care stabileste o legatura sau o relatie intre doua tabele
+
+Relatia multi-la-multi se exprima printr-un tabel de jonctiune - ex: Author - AuthorBook - Book
+
+SQL Command Types:
+
+DDL: CREATE, DROP, ALTER, TRUNCATE
+DQL: SELECT
+DML: INSERT, UPDATE, DELETE
+DCL: GRANT, REVOKE
+TCL: COMMIT, ROLLBACK

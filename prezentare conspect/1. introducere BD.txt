@@ -1,0 +1,51 @@
+Baza de date - o colectie de structura de date stocate conform unor reguli specifice care reglementeaza accesul, administrarea si actualizarea informatiilor
+
+SGBD - software care asigura respectarea regulilor specifice unei baze de date. 
+ - Faciliteaza crearea, actualizarea si interogarea datelor din baze de date. 
+ - Ofera functionalitati esentiale precum gestionarea permisiunilor utilizatorului, protejarea datelor prin mecanisme de securitate si integritate.
+ - Operatiuni de backup si restaurare pentru a preveni pierderea informatiilor.
+
+Provocarile gestionarii datelor:
+- Dimensiunea datelor
+- Acuratetea datelor
+- Usurinta actualizarii datelor
+- Securitatea datelor
+- Redundanta sau duplicare a datelor
+- Integritatea datelor
+
+Model relational - organizeaza informatiile in tabele cu structura fixa unde fiecare rand din tabel trebuie sa urmeze aceeasi schema, avand aceleasi coloane si respectand formatul prestabilit
+
+Tipuri de date:
+- bit: Numar intreg care poate fi 0, 1 sau NULL,       1 byte
+- tinyint: Numar intreg de la 0 la 255,                1 byte
+- smallint: Numar intreg de la -32.768 la 32.767,      2 byte
+- int: Numar intreg de la -2 milioane la 2 milioane,   4 byte
+- bigint: Numar intreg de la -9.223.372.036.854.775.808  la 9.223.372.036.854.775.807, 8 byte
+
+- Decimal(p, s)/Numeric(p, s): Numar zecimal, p - nr total de cifre(stanga si dreapta punctului), s - nr cifre dupa virgula, 5-17 byte
+- float: -1.79E+308 - 1.79E+308, 4/8 bytes
+- real: -3.40E+38 - 3.40E+38, 4 bytes
+
+- smallmoney: date monetare -214.748,3648 la 214.748,3647, 4 byte
+- money: de la de la -922.337.203.685.477,5808 la 922.337.203.685.477,5807, 8 byte
+
+Non-Unicode
+- char(n): 8-8000 caractere. Lungimea este fixata. Daca sirul are mai putine caractere decat lungimea specificata, spatiul ramas va fi completat cu caractere spatiu, n byte
+- varchar(n): 0-8000 caractere. Lungimea este variabila. Stocheaza doar numarul de caractere efectiv introduse, n bytes + 2
+- text: 0-2 miliarde, lungimea variabila, n bytes + 4
+Unicode
+- nchar(n): 0-4000 caractere. Lungimea este fixata. 2n bytes
+- nvarchar(n): 0-4000 caractere. Lungimea variabila. 2n bytes
+
+- date: De la 0001-01-01 până la 9999-12-31, 3 bytes
+- time: de la De la 00:00:00.0000000 până la 23:59:59.9999999, 5 bytes
+- datetime: De la 1753-01-01 00:00:00.000  până la 9999-12-31 23:59:59.997, 8 bytes
+- datetime2: De la 0001-01-01 00:00:00.0000000 până la 9999-12-31 23:59:59.9999999, 6-8 bytes, 
+- smalldatetime: De la 1900-01-01 00:00:00  până la 2079-06-06 23:59:59, 4 bytes
+- datetimeoffset: nformația despre dată, oră și fusul orar (diferența față de ora UTC), 10 bytes
+- timestamp: Numărul de secunde de la 1 ianuarie 1970, 4 bytes
+
+
+
+
+

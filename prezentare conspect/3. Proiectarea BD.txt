@@ -1,0 +1,10 @@
+Proiectarea bazei de date:
+- Proiectarea conceptuala: crearea unui model abstract al datelor, independent de detaliile tehnice, folosind specificatiile utilizatorilor(Diagrama ER)
+- Proiectarea logica: impli convertirea modelului conceptual in tabele relationale, urmand regulile de transformare si normalizare a datelor
+- Proiectarea fizica: metoda concreta de configurare a bazei de date, incluzand structura tabelelor, indexurile, securitatea si tipurile de date folosite
+
+Reguli la crearea tabelelor:
+- In relatia 1:1, datele se combina intrun singur tabel, adaugand coloanele din tabel B la tabel A
+- In relatia 1:1, daca datele sunt confidentiale, se creeaza tabele separate, cheia straina tabel A se plaseaza in tabel B, cu constrangerile NOT NULL si UNIQUE
+- In relatia 1:M, cheia straina a tabelului parinte este introdusa in tabelul copil
+- In relatia M:M, se creeaza un tabel intermediar cu chei straine care refera la ambele entitati implicate
