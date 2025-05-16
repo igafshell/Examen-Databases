@@ -1,4 +1,4 @@
 Normalizarea - proces de eliminare a redundantelor(repetarile inutile de date) si dependentelor(relatiile complicate dintre date) care pot cauza cresterea dimensiunii bazei de date si probleme
 
 1. Reducerea redundantelor:
-Separam coloana/coloanele cu redundanta intrun tabel extern. 
+Separam coloana/coloanele cu redundanta intrun tabel extern. gh gh
