@@ -1,4 +1,49 @@
 Normalizarea - proces de eliminare a redundantelor(repetarile inutile de date) si dependentelor(relatiile complicate dintre date) care pot cauza cresterea dimensiunii bazei de date si probleme
 
 1. Reducerea redundantelor:
-Separam coloana/coloanele cu redundanta intrun tabel extern. gh gh
+Separam coloana/coloanele cu redundanta intrun tabel extern.
+ClientID, Nume, Adresa, Oras -> CliendID, Nume, AdresaID + AdresaID, Strada, Oras
+
+2. Reducerea dependentelor:
+Anumite informatii sunt dependente de alte infomatii fata de care nu au legatura directa. Face actualizarea datelor complexa, predispusa la erori.
+AngajatID, Nume, Departament, Manager
+AngajatID <- Departament <- Manager, Manager este dependent de AngajatID prin Departament, dependenta indirecta. daca este actualizat doar departamentul dar nu Managerul, se va crea o eroare.
+Este necesar de separat in doua tabele:
+Angajati: AngajatID, Nume, DepartamentID
+Departamnte: DepartamentID, Departament, Manager
+
+Forme normale:
+1. Prima forma normala (1NF): Elimina grupurile repetate si asigura valori atomice
+2. Doua forma normala (2NF): Elimina dependentele partiale
+3. Treia forma normala (3NF): Elimina dependentele tranzitive
+4. Patra forma normala (4NF): Elimina dependentele multivaloare
+5. Cincea forma normala (5NF): Elimina dependentele redundante de join
+
+1NF: Elimina valorile multiple dintro singura celula
+Le transforma in inregistrari separate.
+
+2NF: Elimina dependentele partiale
+Rezervari: ClientID, CameraID, DataCheckIn, DataCheckOut, NumeCamera, TipCamera
+NumeCamera, TipCamera sunt dependente numai de CameraID, dar nu si de ClientID. Trebuie sa fie doar cele care depind de toata cheia primara
+Rezervari: ClientID, CameraID
+Camere: CameraID, NumeCamera, TipCamera
+
+3NF: Elimina dependentele tranzitive
+Atributele treubie sa depinda direct de cheia primara, nu de un alt atribut sau cheie straina
+Camere: CameraID, NumarCamera, TipCamera, Etaj, NumeManagerEtaj, TelefonManagerEtaj
+CameraID <- Etaj <- NumeManagerEtaj, TelefonManagerEtaj
+Baza de date normalizata:
+Camere: CameraID, NumarCamera, TipCamera
+ManagerEtaj: Etaj, NumeManagerEtaj, TelefonManagerEtaj
+
+4FN: Elimina dependentele multivaloare netriviala
+Exista doua atribute care sunt dependente de cheia primara intrun mod aparte pentru fiecare.
+OaspeteID <- LimbajPreferat
+OaspeteID <- MetodaPlataPreferata
+Poate fi urmatoarea situatie:
+1 Romana  Transfer Bancar
+2 Romana  Card
+2 Engleza Card
+Pentru a evita situatia, cream cate un tabel pentru fiecare atribut aparte
+
+5NF: Elimina dependentele de join netriviale
