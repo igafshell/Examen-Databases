@@ -1,0 +1,8 @@
+SQL Server ofera doua moduri principale de autentificare pentru a proteja accesul la date:
+- Windows Authentification
+- SQL Server Authentification
+
+Access Control Model: 
+1. Autentificarea utilizatorului - se creeaza un cont de utilizator
+2. Autorizarea utilizatorului - un login asociat cu mai multi useri
+

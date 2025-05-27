@@ -1,0 +1,51 @@
+Securitatea unei baze de date - reprezinta ansamblul de sisteme, procese si proceduri care protejeaza baza de date impotriva activitatilor nedorite
+- Exfiltrarea datelor - furtul de date confidentiale, IDNP, etc.
+- Atacuri cibernetice - SQL Injection, Brute Force Attack
+- Coruperea datelor 
+
+Masuri de protectie 
+1. Criptarea datelor - asigura protectia datelor stocate in baza de date
+2. Controlul accesului bazat pe roluri:
+- Atribuie permisiuni utilizaturilor pe baza rolurilor lor, limitand accesul doar la datele necesare
+- Aplica principiul minimului privilegiu(Least Privilege) pentru a reduce riscul de acces neautorizat
+3. Autentificare si autorizare puternica:
+- Integrarea cu sistemele de autentificare Windows si permisiunile NTFS(New Technology File System) bazate pe conturi si grupuri de securitate ale Windows, adauga protectie prin controlul accesului la fisiere de pe disc
+- Utilizarea parolelor complexe si politici de expirare a acestora
+4. Monitorizarea activitatilor
+- Implementarea sistemelor de monitorizare pentru a urmari acesul si activitatile utilizatorilor
+- Alarme de securitate pentru accesul neautorizat sau actiuni suspecte
+
+SQL Injection:
+Se trimite o interogarea SQL malitioasa direct in campul de input
+
+Masuri de protectie impotriva SQL Injection:
+1. Validarea datelor de intrare - filtreaza datele introduse de utilizator
+2. Minimizarea detalizarii erorilor - dezactiveaza afisarea detaliilor erorilor SQL in aplicatii, pentru a nu oferi informatii despre baza de date
+3. Monitorizarea activitatilor - monitorizeaza interogarile SQL pentru a detecta comportament suspicios si incercari de atac
+4. Principiul "Minimului Privilegiu" (Least Privilege) - acorda utilizatorilor drepturi minime pentru a accesa datele
+
+Brute Force Attack(Dictionary Attack) - tehnica de atac prin incercarea sistematica a tuturor combinatiilor posibile de parole sau chei de acces
+
+Masuri de protectie pentru Brute Force:
+1. Utilizarea autentificarii multi-factor: Pe langa parola, utilizatorul trebuie sa furnizeze un alt factor de autentificare(un cod trimis prin SMS)
+2. Limitarea numarului de incercari de autentificare: dupa un anumit nr de incercari nereusite contul este temporar blocat
+3. Parole complexe si lungi
+
+Integritate referentiala: asigura ca relatiide dintre tabele raman coerente dupa stergerea/modificarea datelor
+
+Transaction - unitate de lucru logica care consta intruna sau mai multe operatii de citire, scriere, modificare sau stergere a datelor. Trebuie sa fie atomica, toate operatiile din cadrul acesteia executate complet, asigurand integritatea datelor
+
+BEGIN TRANSACTION
+COMMIT TRANSACTON
+ROLLBACK TRANSACTION
+
+Niveluri de izolare ale tranzactiilor: este necesar sa se stabileasca nivelul ei de izolare adica modul in care aceasta tranzactie interactioneaza cu alte tranzactii 
+
+Lost Update: problema in tranzactii concurente, in care doua tranzactii citesc aceeasi valoare si o actualizeaza, iar modificarile primei tranzactii sunt suprascrise de a doua
+
+Dirty Read: tranzactia poate citi date care sunt modificate de alte tranzactii care nu au fost inca confirmate
+
+Non-repeatable read: prima tranzactie acceseaza intregistrarile, o alta tranzactie modifica datele respective.
+
+Phantom read: cand prima tranzactie citeste inregistrarile, o alta tranzactie adauga sau sterge randuri din acele inregistrari. Cand prima tranzactie revine pentru a citi din nou aceleasi randuri, va intalni un nou rand fantoma
+
