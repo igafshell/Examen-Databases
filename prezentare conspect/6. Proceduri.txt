@@ -1,0 +1,3 @@
+Stored Procedure - set predefinit de instructiuni SQL care sunt salvate in baza de date si pot fi executate la cerere. Include operatiuni de interogare, actualizari, insertii, stergeri de date, logici complexe
+
+Functie - ansamblu de instructiuni utilizat pentru a efectua o actiune, de exemplu, un calcul complex.

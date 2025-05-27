@@ -1,0 +1,21 @@
+Index - structura de date asociata cu un tabel, permite accesul rapid la informatii si imbunatateste performanta interogarilor bazei de date, ajutand DBMS sa gaseasca rapid randuri potrivite criteriilor de cautare
+
+In lipsa tabelului, cautarea se efectueaza prin scanarea intregului tabel, fiind ineficient pentru tabele mari
+
+Multi indexi pot incetini stergerea, actualizarea, inserarea(DML), deoarece fiecare modificare a datelor necesita actualizarea tuturor indexilor
+
+Indexii trebuie creat tinand cont de urmatoarele aspecte:
+1. indexii sunt generati automat pentru cheile primare
+2. indexii trebuie creati pentru campurile care sunt frecvent utilizate in cautari si au un numar minim de valori duplicate, si NOT NULL
+
+Indexul lucreaza pe baza unui Balanced Tree (tree in care nr de ramuri din stanga si dreapta nodului radacina este aproximativ egal)
+
+Tipuri de indexi:
+1. Clustered Index: 
+ - Stocheaza randurile reale de date in nodurile sale frunza
+ - Datele din tabel sunt fizic aranjate conform ordinii impuse de clustered index
+ - Fiecare tabel poate avea doar un singur clustered index
+2. Non-clustered index:
+ - contine la nivelul frunzelor valorile sortate ale coloanei indexate si un row locator - pointer catre restul datelor
+ - daca tabelul are clustered index, row locator este cheia indexului clustered
+ - tabelul poate avea mai multi indexi non-clustered

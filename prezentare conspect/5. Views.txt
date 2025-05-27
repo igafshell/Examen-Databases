@@ -1,0 +1,10 @@
+View(Vizualizare) - interogare SQL salvata ca un obiect din baza de date. Se comporta ca un tabel virtual, ne permite sa il accesam si sa il utilizam prin referinta la numele ei
+
+Scop:
+1. Securitate si controlul accesului: Views pot limita accesul utilizatorilor la anumite coloane sau randuri din tabelele de baza
+2. Simplificarea interogarilor complexe prin incorporarea unei interogari complexe intrun singur view.
+
+Limitari:
+1. Views actualizabile: pentru ca un view sa fie actualizat, trebuie sa respectam conditiile existente(SUM, MAX, DISTINCT, GROUP BY, HAVING)
+2. Dependente: daca tabelele de baza se schimba, vizualizarile pot deveni invalide sau pot produce erori
+3. ORDER BY: un view nu poate include comenzi ca ORDER BY doar daca este utilizata cu TOP, ordonarea rezultatelor este efectuata in interogarea care acceseaza vizualizarea, nu in definitie
