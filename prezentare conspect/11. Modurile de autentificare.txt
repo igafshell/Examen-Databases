@@ -6,3 +6,31 @@ Access Control Model:
 1. Autentificarea utilizatorului - se creeaza un cont de utilizator
 2. Autorizarea utilizatorului - un login asociat cu mai multi useri
 
+Rolurile la nivel de server:
+sysadmin - acces total la SQL Server
+serveradmin - modifica setarile serverului
+setupadmin - adauga, sterge, configureaza conexiuni la baze de date externe
+securityadmin - creeaza, modifica, sterge loginuri, acorda permisiuni utilizatorilor
+processadmin - monitorizeaza si gestioneaza procesele SQL Server active
+diskadmin - adauga, extinde, sterge fisiere fizice din bazele de date existente. Nu poate gestiona datele din baze de date, doar fisierele fizice
+bulkadmin - poate efectua importul masiv de date prin BULK INSERT (.csv)
+dbcreator - creeaza si sterge baze de date
+public - acces minim implicit, nu ofera permisiuni administrative
+
+SQL Login - autentificare - decide accesul la server
+SQL User - autorizare - ce operatiuni putem face
+
+Rolurile in SQL Server:
+Rol                 Poate modifica structura?    Poate modifica date?   Poate gestiona utilizatori?
+db_owner            Da                           Da                     Da
+db_accessadmin      Nu                           Nu                     Da  
+db_backupoperator   Nu                           Nu                     Nu
+db_datareader       Nu                           Nu                     Nu
+db_datawriter       Nu                           Nu                     Nu
+db_ddladmin         Da                           Nu                     Nu
+db_denydatareader   Nu                           Nu                     Nu
+db_denydatawriter   Nu                           Nu                     Nu
+db_securityadmin    Nu                           Nu                     Da
+
+GRANT/DENY - acorda/interzice drepturi
+REVOKE - elimina drepturile/restrictiile

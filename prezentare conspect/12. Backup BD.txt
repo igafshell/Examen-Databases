@@ -1,0 +1,11 @@
+Backup-ul unei baze de date - copie de rezerva a datelor, poate fi utilizata pentru a restaura baza de date intro stare anterioara. Esential pentru mentinerea integritatii datelor si pentru asigurarea continuitatii operatiilor
+
+Backup Complet - copie completa a intregii baze de date
+Backup diferential - salveaza doar modificarile facute de la ultimul backup complet
+Backup incremental - salveaza doar datele care au fost modificate dupa cel mai recent backup, mai rar in SQL Server
+Backup jurnal de tranzitii(Transaction Log Backup) - Salveaza modificarile inregistrate in jurnalul de tranzitii de la ultimul backup de jurnal. Specific SQL Server
+
+Strategii de backup:
+1. Full Backup -> Full Backup -> Full Backup - pentru bd mai mici sau cu putine modificari, mai multe resurse pentru bd mari
+2. Full -> Diff -> Diff -> Full -> ... - bd mari/medii cu operatii frecvente
+3. Full -> Diff -> Log -> Log -> Log -> Diff -> Full - pentru baze de date mari, importanta recuperarea la un punct precis in timp
