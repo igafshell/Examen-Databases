@@ -44,4 +44,330 @@ C. Bypass case sensitivity requirements
 D. Give the user control of the query logic
 RS: A
 
-Which 
+Which permission does a user need in order to run a stored procedure?
+A. EXECUTE
+B. ALLOW
+C. CALL
+D. RUN
+RS: A
+
+You have a table named Product. You create a view that includes all the products from the Product table that are in the Furniture category. You execute a statemenmt on the Product table that deletes all the products in the Furniture category. After you execute the statement, the result set of the view is:
+A. Empty
+B. Deleted
+C. Unchanged
+D. Archived
+RS: A
+
+In SQL, an insert statement is used to add a
+A. User to a database
+B. Row of data to a table
+C. Table to a database
+D. Column to a table definition
+RS: B
+
+You have two tables. Each table has three rows. How many rows will be included in the Cartesian product of these two tables:
+A. 0
+B. 3
+C. 6
+D. 9
+RS: 9
+
+Which keyword can be used in a create table statement?
+A. ORDER BY
+B. DISTINCT
+C. GROUP BY
+D. UNIQUE
+RS: D
+
+You need to store product quantities, and you want to minimize the amount of storage space that is used. Which data type should you use?
+A. INTEGER
+B. DOUBLE
+C. COUNT
+D. FLOAT
+RS: A
+
+Which statement will result in the creation of an index?
+A. CREATE TABLE Employee(
+    EmployeeID INTEGER PRIMARY KEY
+)
+
+B. CREATE TABLE Employee(
+    EmployeeID INTEGER DISTINCT
+)
+
+C. CREATE TABLE Employee (
+    EmployeeID INTEGER NULL
+)
+
+D. CREATE TABLE Employee (
+    EmployeeID INTEGER INDEX
+)
+RS: A
+
+You have the following table definition:
+CREATE TABLE Road (
+    RoadID INTEGER NOT NULL,
+    Distance INTEGER NOT NULL
+)
+The Road table contains the following data:
+RoadID  Distance
+1234    22
+1384    34
+You execute the following statement:
+INSERT INTO Road VALUES (1234, 36)
+What is the result?
+A. an error stating the NULL values are not allowed
+B. a new row in the table
+C. an error stating the duplicate IDs are not allowed
+D. a syntax error
+RS: B
+
+You need to store product names that vary from 3 to 30 characters. You also need to minimize the amount of storage space that is used. Which data type should you use?
+A. VARCHAR(3, 30)
+B. CHAR(3, 30)
+C. VARCHAR(30)
+D. CHAR(30)
+RS: C
+
+Which statement creates a composite key?
+A. CREATE TABLE Order (
+    OrderID     INTEGER PRIMARY KEY,
+    OrderItemID INTEGER PRIMARY KEY
+)
+
+B. CREATE TABLE Order (
+    OrderID      INTEGER,
+    OrderItemID  INTEGER, 
+    PRIMARY KEY OrderID,
+    PRIMARY KEY OrderItemID
+)
+
+C. CREATE TABLE Order (
+    OrderID     INTEGER,
+    OrderItemID INTEGER.
+    PRIMARY KEY
+)
+
+D. CREATE TABLE Order (
+    OrderID     INTEGER,
+    OrderItemID INTEGER,
+    PRIMARY KEY(OrderID, OrderItemID)
+)
+RS: D
+
+At 15:00, you create a backup of your database. At 16:00, you create a table named Customer and import data into the table. At 17:00, your server fails. You run a script to apply only the 15:00 backup to your database. What is the result of the script?
+A. The Customer table no longer exists
+B. The Customer table is unaffected
+C. The Customer table exists but has no data
+D. The script fails
+RS: A
+
+In which situation do you need to perform a restore on a database
+A. When data becomes corrupted in the database
+B. When you need to rollback a transaction
+C. When you encounter an error in your application
+D. When data needs to be deleted from the database
+RS: A
+
+Which command should you use to give a user permission to read data in a table?
+A. ALLOW SELECT
+B. LET READ
+C. PERMIT READ
+D. GRANT SELECT
+RS:D
+
+You need to enable a new employee to authenticate to your database. Which command should you use?
+A. ALLOW USER
+B. CREATE USER
+C. ADD USER
+D. INSERT USER
+E. ALTER USER
+RS: B
+
+Which two elements are required to define a column?
+A. A name
+B. A key
+C. An index
+D. A data type
+RS: A D
+
+What definees the amount of storage space that is allocated to a value in a column?
+A. format
+B. key
+C. data type
+D. validator
+RS: C
+
+You are creating a table to store customer data. The AccountNumber column uses values that always consist of one letter and four digits. Which data type should you use for the AccountNumber column?
+A. CHAR
+B. BYTE
+C. DOUBLE
+D. SMALLINT
+RS:CHAR
+
+What is one difference between an update statement and a delete statement?
+A. An update statement can change only one row
+B. A delete statement cannot use a where clause
+C. An update statement does not remove rows from a table
+D. A delete statement works only within a stored procedure
+RS: C
+
+You have a Department table and an Employee table in your database. You need to ensure that an employee can be assigned to only an existing department. What should you apply to the Employee table?
+A. A primary key
+B. An index
+C. A foreign key
+D. A unique constraint
+E. A data type
+RS: C
+
+You need to store the first name, last name, and studentID for 100 students. This information will be stored in a table as:
+A. 100 items and three cells
+B. 100 rows and three columns
+C. three rows and three columns
+D. three items and 100 cells
+RS: B
+
+What are three valid data manipulation language(DML) commands?
+A. INSERT
+B. COMMIT
+C. DELETE
+D. OUTPUT
+E. UPDATE
+RS: A C E
+
+You assign User1 a set of permissions that include the WITH GRANT OPTION. The WITH GRANT OPTION enables User1 to
+A. request a log of permission use
+B. delegate permissions to other users
+C. create new database users
+D. view other users permissions
+RS: C
+
+Which type of index changes the order in which the data is stored in a table?
+A. non-sequential
+B. sequential
+C. non-clustered
+D. clustered
+RS: A
+
+Which statement should you use to remove a foreign key?
+A. ALTER TABLE
+B. DELETE TABLE
+C. DELETE FOREIGN KEY
+D. ALTER FOREIGN KEY
+RS: A
+
+First normal form requires that a database excludes:
+A. Foreign keys
+B. Composite keys
+C. Duplicate rows
+D. Repeating groups
+RS: D
+
+You execute a statement inside a transaction to delete 100 rows from a table. The transaction fails after only 40 rows are deleted. What is the result in the database?
+A. The table will be corrupted
+B. 40 rows will be deleted from the table
+C. The transaction will restart
+D. No rows will be deleted from the table
+RS: D
+
+You have a table that contains product IDs and product names. You need to write an UPDATE statement to change the name of a specific product to glass. What should you include in the update statement?
+A. SET ProduetName = 'glass'
+B. LET ProduetName = 'glass'
+C. EXEC ProduetName = 'glass'
+D. ASSIGN ProduetName = 'glass'
+RS: A
+
+Your database contains a table named Customer. You need to delete the record from the Customer table that has a CustomerID of 12345. Which statement should you use?
+A. UPDATE Customer 
+DELETE *
+WHERE CustomerID = 12345
+
+B. DELETE CustomerID 
+FROM Customer
+WHERE CustomerID = 12345
+
+C. UPDATE CustomerID 
+FROM Customer
+DELETE *
+WHERE CustomerID = 12345
+
+D. DELETE FROM Customer
+WHERE Customer ID = 12345
+
+RS: D
+
+On which database structure does an insert statement operate?
+A. Role
+B. Trigger
+C. User
+D. Stored procedure
+E. Table
+RS: E
+
+You have te following table definition:
+CREATE TABLE Product (
+    ID INTEGER PRIMARY KEY,
+    Name VARCHAR(20),
+    Quantity INTEGER
+)
+The Product table contains the following data.
+
+ID   Name    Quantity
+1234 Apples  33
+2615 Oranges 0 
+3781 Pears   29
+4589 Plums
+
+You execute the following statement:
+SELECT Name FROM Product WHERE Quantity IS NOT NULL
+How many rows are returned?
+A. 0
+B. 1
+C. 2
+D. 3
+E. 4
+RS: 3
+
+You are writing a select statment to find every product whose name contains a specific character.
+Which keyword should you use in your where clause?
+A. FIND
+B. BETWEEN
+C. INCLUDES
+D. LIKE
+RS: D
+
+A database contains two tables named Customer and Order.
+You execute the following statement
+DELETE FROM Order 
+WHERE CustomerID = 209
+What is the result?
+A. The first order for CustomerID 209 is deleted from the Order table
+B. All orders for CustomerID 209 are deleted from the Order table, and CustomerID 209 is deleted from the Customer table
+C. All orders for CustomerID 209 are deleted from the Order table
+D. CustomerID 209 is deleted from the Customer table
+RS: C
+
+You have a table named Product. The product table has columns for ProductDescription and ProductCategory. You need to change the ProductCategory value for all the spoons in the Product table to 43. Which statement should you use?
+A. UPDATE Product
+SET ProductCategory = 43
+WHERE ProductDescription = 'spoon'
+
+B. SET Product 
+WHERE ProductDescription = 'spoon'
+TO ProductCategory = 43
+
+C. UPDATE Product 
+WHERE ProductDescription = 'spoon'
+SET ProductCategory = 43
+
+D. SET Product
+TO ProductCategory = 43
+WHERE ProductDescription = 'spoon'
+RS: A
+
+You have a table that contains information about all students in your school. Which SQL keyword should you use to change a student's first name in the table?
+A. UPDATE
+B. CHANGE
+C. SELECT
+D. INSERT
+RS: UPDATE
