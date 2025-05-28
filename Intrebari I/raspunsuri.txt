@@ -1,0 +1,47 @@
+You are writing an SQL statement to retrieve rows from a table. Which data manipulation language (DML) command should you use?
+A. READ
+B. SELECT
+C. OUTPUT
+D. GET
+RS: B. SELECT
+
+Which constraint ensures a unique value in the ID column for each customer?
+A. DISTINCT
+B. FOREIGN KEY
+C. SQUENTIAL
+D. PRIMARY KEY
+RS: PRIMARY KEY
+
+The component that holds information for a single entry in a table is called a:
+A. Data type
+B. Row
+C. Column
+D. View
+RS: Row
+
+You execute the following statement:
+SELECT EmployeeID, FirstName, DepartmentName
+FROM Employee, Department
+This type of operation is called:
+A. Intersection 
+B. Outer join
+C. Equi-join
+D. Cartesian product
+RS: D
+
+Which command should you use to add a column to an existing table?
+A. MODIFY
+B. ALTER
+C. UPDATE
+D. INSERT
+E. CHANGE
+RS: B. ALTER
+
+One reason to create a stored procedure is to
+A. Improve performance
+B. Minimize storage space
+C. Bypass case sensitivity requirements
+D. Give the user control of the query logic
+RS: A
+
+Which 
